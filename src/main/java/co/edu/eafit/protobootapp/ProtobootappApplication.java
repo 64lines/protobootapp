@@ -27,7 +27,7 @@ public class ProtobootappApplication {
 //Se ejecuta con http://localhost:8080/hola o http://localhost:8080/hola?nombre=John
     @GetMapping("/hola")
     public String hola(@RequestParam(value = "nombre", defaultValue = "Mundo") String nombre) {
-        return String.format("Hola %s!", nombre);
+        return String.format("Hole %s!", nombre);
     }
     
     //Se ejecuta con http://localhost:8080/cuadrado o http://localhost:8080/cuadrado?numero=5
