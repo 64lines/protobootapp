@@ -1,24 +1,24 @@
 version: 0.2
 
-#env:
+  #env:
   #variables:
-     # key: "value"
-     # key: "value"
+  # key: "value"
+  # key: "value"
   #parameter-store:
-     # key: "value"
-     # key: "value"
+  # key: "value"
+  # key: "value"
   #secrets-manager:
-     # key: secret-id:json-key:version-stage:version-id
-     # key: secret-id:json-key:version-stage:version-id
+  # key: secret-id:json-key:version-stage:version-id
+  # key: secret-id:json-key:version-stage:version-id
   #exported-variables:
-     # - variable
-     # - variable
+  # - variable
+  # - variable
   #git-credential-helper: yes
-#batch:
+  #batch:
   #fast-fail: true
   #build-list:
   #build-matrix:
-  #build-graph:
+#build-graph:
 phases:
   install:
     #Si utiliza la imagen estándar de Ubuntu 2.0 o posterior, debe especificar las versiones del tiempo de ejecución.
@@ -26,27 +26,27 @@ phases:
     runtime-versions:
       java: corretto11
       # name: version
-    #commands:
+      #commands:
       # - command
       # - command
-  #pre_build:
-    #commands:
+      #pre_build:
+      #commands:
       # - command
       # - command
   build:
     commands:
       - mvn compile
       - mvn test
-      # - mvn install
+      - mvn install
       # - command
   post_build:
     commands:
       - mvn package
       - mv target/protobootapp-0.0.1-SNAPSHOT.jar root.jar
       # - command
-#reports:
-  #report-name-or-arn:
-    #files:
+      #reports:
+      #report-name-or-arn:
+      #files:
       # - location
       # - location
     #base-directory: location
@@ -56,9 +56,9 @@ artifacts:
   files:
     - root.jar
     # - location
-  #name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
-#cache:
-  #paths:
+    #name: $(date +%Y-%m-%d)
+    #discard-paths: yes
+    #base-directory: location
+    #cache:
+    #paths:
     # - paths
